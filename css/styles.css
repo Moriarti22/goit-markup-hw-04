@@ -93,6 +93,7 @@ img {
 }
 
 
+
 /* Лого */
 
 .logo {
@@ -287,6 +288,35 @@ img {
 
 .feature-list .item {
     width: 270px;
+}
+
+.feature-list .item::before {
+    display: block;
+    content: '';
+    min-height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70px 70px;
+    background-color: var(--background-our-team);
+
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.feature-list .icon-antenna::before {
+    background-image: url(../images/antenna.svg);
+}
+
+.feature-list .icon-clock::before {
+    background-image: url(../images/clock.svg);
+}
+
+.feature-list .icon-diagram::before {
+    background-image: url(../images/diagram.svg);
+}
+
+.feature-list .icon-astronaut::before {
+    background-image: url(../images/astronaut.svg);
 }
 
 .feature-list .list {
