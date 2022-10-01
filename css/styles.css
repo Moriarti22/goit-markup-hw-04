@@ -23,6 +23,7 @@
     --addres-footer: rgba(255, 255, 255, 0.6);
     --border-filter: #EEEEEE;
     --border-header: #ECECEC;
+    --color-our-clients: #AFB1B8;
 }
 
 
@@ -37,6 +38,9 @@ body {
 
 header {
     border-bottom: 1px solid var(--border-header);
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1,
@@ -72,7 +76,7 @@ img {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding-right: 15px;
     padding-left: 15px;
@@ -120,6 +124,7 @@ img {
 
 /* Сайт nav */
 
+
 .container.main-nav {
     display: flex;
     align-items: center;
@@ -134,10 +139,9 @@ img {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-
     background-color: var(--white-color-text);
     color: var(--primary-color-text);
-
+    
     font-size: 14px;
     font-weight: 500;
     line-height: 1.14;
@@ -157,6 +161,7 @@ img {
     margin-right: 50px;
 }
 
+
 .site-nav .list {
     display: flex;
 }
@@ -164,10 +169,12 @@ img {
 .list.contact {
     display: flex;
     margin-left: auto;
+    align-items: center;
 }
 
 .contact .link {
-    display: block;
+    display: flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -189,6 +196,10 @@ img {
     color: var(--accent-color);
 }
 
+.icon-header {
+    margin-right: 10px;
+    fill: currentColor;
+}
 
 
 /* index.html */
@@ -216,11 +227,6 @@ img {
     padding-top: 200px;
     padding-bottom: 200px;
 }
-
-.hero .container {
-
-}
-
 
 
 .hero .main-title {
@@ -291,7 +297,7 @@ img {
 }
 
 .feature-list .item::before {
-    display: block;
+    display: flex;
     content: '';
     min-height: 120px;
     background-repeat: no-repeat;
@@ -337,10 +343,9 @@ img {
 
 /*  h2 для section-work і our-team */
 
-.section-work .title,
-.our-team .title {
-    margin-bottom: 50px;
 
+.title {
+    margin-bottom: 50px;
     text-align: center;
     font-size: 36px;
     font-weight: 700;
@@ -392,8 +397,52 @@ img {
     padding-bottom: 30px;
 }
 
+/* Секція  regular-clients*/
+
+.regular-clients {
+    margin-top: 94px;
+    margin-bottom: 94px;
+}
+
+
+.regular-clients .item {
+    display: flex;
+    cursor: pointer;
+    width: 170px;
+    height: 92px;
+    border-radius: 4px;
+    border: 1px solid var(--color-our-clients);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.regular-clients .client {
+    fill: var(--color-our-clients);
+}
+
+.client:hover,
+.client:focus {
+    fill: var(--accent-color);
+}
+
+.regular-clients .list {
+    display: flex;
+    justify-content: space-between;
+}
 
 /* Футер */
+
+footer {
+    max-width: 1600px;
+    background-color: var(--background-hero);
+    background-position: center;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .footer-bottom .logo {
     margin-bottom: 20px;
@@ -403,13 +452,6 @@ img {
 
 .footer-bottom .item + .item {
     margin-top: 9px;
-}
-
-footer {
-    background-color: var(--background-hero);
-    padding-top: 60px;
-    padding-bottom: 60px;
-
 }
 
 .address-company .link {
@@ -428,6 +470,13 @@ footer {
 .address-company .link:hover,
 .address-company .link:focus {
     color: var(--accent-color);
+}
+
+.join .title {
+    text-transform: uppercase;
+    color: var(--white-color-text);
+    font-size: 14px;
+    line-height: 1.14;
 }
 
 /*  */
@@ -500,18 +549,6 @@ footer {
     padding-bottom: 20px;
 }
 
-/* .projects .item {
-    display: flex;
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 370px;
-}
-
-.projects .list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-} */
 
 .projects .list {
     display: flex;
