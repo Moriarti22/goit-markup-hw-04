@@ -24,6 +24,7 @@
     --border-filter: #EEEEEE;
     --border-header: #ECECEC;
     --color-our-clients: #AFB1B8;
+    --gradient-social: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -387,9 +388,10 @@ img {
 
 .our-team .team-profession {
     color: var(--second-color);
-
     font-size: 16px;
     line-height: 1.18;
+
+    padding-bottom: 16px;
 }
 
 .our-team .content {
@@ -397,33 +399,61 @@ img {
     padding-bottom: 30px;
 }
 
-/* Секція  regular-clients*/
+.link-social {
+    display: flex;
+    fill: var(--color-our-clients);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.list-social {
+    display: flex;
+    fill: var(--color-our-clients);
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.link-social:hover,
+.link-social:focus {
+
+    background-color: var(--accent-color);
+}
+
+.link-social:hover .social-net,
+.link-social:focus .social-net {
+    fill: var(--white-color-text);
+}
 
 .regular-clients {
     margin-top: 94px;
     margin-bottom: 94px;
 }
 
-
-.regular-clients .item {
+.regular-clients .client {
     display: flex;
-    cursor: pointer;
     width: 170px;
     height: 92px;
     border-radius: 4px;
-    border: 1px solid var(--color-our-clients);
-
     justify-content: center;
     align-items: center;
-}
-
-.regular-clients .client {
     fill: var(--color-our-clients);
+    border: 1px solid var(--color-our-clients);
 }
 
-.client:hover,
-.client:focus {
+.regular-clients .client:hover,
+.regular-clients .client:focus {
     fill: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+.client:hover .item-client,
+.client:hover .item-client {
+    border: 1px solid var(--accent-color);
 }
 
 .regular-clients .list {
@@ -454,6 +484,10 @@ footer {
     margin-top: 9px;
 }
 
+.footer-bottom .list {
+    margin-right: 70px;
+}
+
 .address-company .link {
     color: var(--addres-footer);
 
@@ -475,9 +509,46 @@ footer {
 .join .title {
     text-transform: uppercase;
     color: var(--white-color-text);
+    margin-bottom: 20px;
     font-size: 14px;
     line-height: 1.14;
 }
+
+
+.footer-bottom {
+    display: flex;
+    margin-right: auto;
+
+}
+
+.join {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 12px;
+    width: 206px;
+}
+
+.join .social-net {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    fill: var(--white-color-text);
+    background-color: var(--gradient-social);
+}
+
+.social-net:hover,
+.social-net:focus {
+    background-color: var(--accent-color);
+}
+
+
+
+
 
 /*  */
 /* portfolio.html */
