@@ -17,7 +17,7 @@
     --second-color: #757575;
     --white-color-text: #FFFFFF;
     --backgraund-color-button: #F5F4FA;
-    --background-hero: #2F303A;
+    --background-hero: #C4C4C4;
     --background-hero-gradient: rgba(47, 48, 58, 0.4);
     --background-our-team: #F5F4FA;
     --addres-footer: rgba(255, 255, 255, 0.6);
@@ -25,6 +25,7 @@
     --border-header: #ECECEC;
     --color-our-clients: #AFB1B8;
     --gradient-social: rgba(255, 255, 255, 0.1);
+    --background-footer: #2F303A;
 }
 
 
@@ -39,9 +40,6 @@ body {
 
 header {
     border-bottom: 1px solid var(--border-header);
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 h1,
@@ -208,8 +206,14 @@ img {
 /* Герой */
 
 .overlay {
+
+}
+
+.hero {
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
     max-width: 1600px;
-    height: 600px;
     background-color: var(--background-hero);
     background-image: linear-gradient(
         to right,
@@ -221,12 +225,6 @@ img {
     background-position: center;
     margin-left: auto;
     margin-right: auto;
-}
-
-.hero {
-    text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
 }
 
 
@@ -251,16 +249,16 @@ img {
     color: var(--white-color-text);
     border: none;
     font-family: inherit;
-
     border-radius: 4px;
     border-color: transparent;
+
     font-size: 16px;
     font-weight: 700;
     line-height: 1.88;
     letter-spacing: 0.06em;
-
-    display: inline-block;
     padding: 10px 32px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero .order:hover,
@@ -422,16 +420,13 @@ img {
 .link-social:focus {
 
     background-color: var(--accent-color);
-}
-
-.link-social:hover .social-net,
-.link-social:focus .social-net {
     fill: var(--white-color-text);
 }
 
+
 .regular-clients {
-    margin-top: 94px;
-    margin-bottom: 94px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .regular-clients .client {
@@ -451,10 +446,6 @@ img {
     border: 1px solid var(--accent-color);
 }
 
-.client:hover .item-client,
-.client:hover .item-client {
-    border: 1px solid var(--accent-color);
-}
 
 .regular-clients .list {
     display: flex;
@@ -464,14 +455,9 @@ img {
 /* Футер */
 
 footer {
-    max-width: 1600px;
-    background-color: var(--background-hero);
-    background-position: center;
-
+    background-color: var(--background-footer);
     padding-top: 60px;
     padding-bottom: 60px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .footer-bottom .logo {
